@@ -26,7 +26,7 @@ const INFO_BLOCKS = [
     img: "/info_1.png",
     bgImg: "/stars_1.png",
     isReversed: false,
-    animationDir: "lottie/1/data.json"
+    animationDir: "lottie/1/data.json",
   },
   {
     title: "Algorithmic Credit",
@@ -34,7 +34,7 @@ const INFO_BLOCKS = [
       "We are building an algorithmic approach to credit. Our credit rating will determine creditworthiness and a API will be used in DeFi ecosystem.",
     img: "/info_2.png",
     isReversed: true,
-    animationDir: "lottie/2/data.json"
+    animationDir: "lottie/2/data.json",
   },
   {
     title: "Decentralized Governance",
@@ -43,8 +43,8 @@ const INFO_BLOCKS = [
     img: "/info_3.png",
     bgImg: "/stars_2.png",
     isReversed: false,
-    animationDir: "lottie/3/data.json"
-  }
+    animationDir: "lottie/3/data.json",
+  },
 ];
 import Header from "@/components/Header.vue";
 import Main from "@/components/Main.vue";
@@ -56,13 +56,13 @@ export default {
     Header,
     Main,
     Info,
-    Footer
+    Footer,
   },
   data() {
     return {
-      info: INFO_BLOCKS
+      info: INFO_BLOCKS,
     };
-  }
+  },
 };
 </script>
 
