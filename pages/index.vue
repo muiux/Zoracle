@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <Header />
     <Main />
     <Info
       v-for="(item, index) in info"
@@ -13,7 +12,6 @@
       :animationDir="item.animationDir"
       :class="`block-${index}`"
     />
-    <Footer />
   </div>
 </template>
 
@@ -46,17 +44,13 @@ const INFO_BLOCKS = [
     animationDir: "lottie/3/data.json",
   },
 ];
-import Header from "@/components/Header.vue";
 import Main from "@/components/Main.vue";
 import Info from "@/components/Info.vue";
-import Footer from "@/components/Footer.vue";
 export default {
   name: "App",
   components: {
-    Header,
     Main,
     Info,
-    Footer,
   },
   data() {
     return {
