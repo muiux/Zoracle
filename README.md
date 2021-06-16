@@ -1,0 +1,2 @@
+# Zoracle
+Built with NuxtJS
