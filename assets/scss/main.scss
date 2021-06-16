@@ -1,0 +1,29 @@
+@import "fonts.scss";
+@import "normalize.scss";
+@import "reset.scss";
+
+body {
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  position: relative;
+  overflow-x: hidden;
+  color: var(--text-primary);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+.brand {
+  color: var(--brand);
+}
