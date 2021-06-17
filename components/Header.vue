@@ -2,7 +2,8 @@
   <header :class="['header', { scrolled: scrollPosition > 20 }]">
     <div class="container header__container">
       <div class="logo__container">
-        <img src="@/assets/img/logo.png" alt="" class="logo" />
+        <!-- <img src="@/assets/img/logo.png" alt="" class="logo" /> -->
+        <p class="logo__title">Zet Inu</p>
       </div>
       <div class="nav">
         <ul class="nav__container">
@@ -31,7 +32,7 @@
           </li>
         </ul>
 
-        <a href="https://twitter.com/z0racles" class="twitter_btn">
+        <a target="_blank" class="twitter_btn" href="https://twitter.com/FinanceZet">
           <span class="btn__text">Our twitter</span>
           <img src="@/assets/img/twitter.svg" alt="" class="btn__logo" />
         </a>
@@ -49,20 +50,16 @@ const NAV_LIST = [
     link: "https://zoracles.com/"
   },
   {
-    label: "Swap",
+    label: "Uniswap",
     link: "https://zoracles.com/"
   },
   {
-    label: "Zora",
+    label: "Dextools",
     link: "https://zoracles.com/"
   },
   {
-    label: "Data",
+    label: "Join Us",
     link: "https://data.zoracles.com"
-  },
-  {
-    label: "Governance",
-    link: "https://gov.zoracles.com"
   },
   {
     label: "Contract",
@@ -136,10 +133,19 @@ export default {
 }
 
 .logo__container {
-  max-width: 140px;
+  max-width: 240px;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  .logo__title {
+    font-family: "Jockey";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+
+    color: #f8f8f8;
+  }
 
   img {
     width: 100%;
@@ -155,7 +161,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  width: 90%;
 
   @media screen and (max-width: 767px) {
     display: none;
@@ -216,7 +222,6 @@ export default {
 .burger__list {
   list-style: none;
   padding: 0;
-  margin-bottom: 16px;
   text-align: left;
   margin: 70px 0;
   display: flex;
@@ -226,7 +231,7 @@ export default {
   height: 60%;
 
   .nav_link {
-    font-size: 28px;
+    font-size: 24px;
     display: block;
   }
 }

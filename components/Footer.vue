@@ -2,76 +2,56 @@
   <div class="footer__container">
     <div class="intro">
       <div class="tabs info">
-        <h2 class="template">zoracles</h2>
+        <h2 class="template">Zet Inu</h2>
         <p>
-          We are building a platform powered by Zoracles technology that
-          empowers DeFi users with the data, tools and capital to be competitive
-          in global decentralized financial markets.
+          Zet Inu empowers its community with utility token, ZetSwap and
+          ZetBetting that give them a wide variety of benefits in the
+          cryptocurrency ecosystem.
         </p>
       </div>
       <div class="tabs quick__links">
         <h3 class="template">QUICK LINKS</h3>
         <ul class="list">
-          <li><a class="link" href="https://zoracles.com/">Home</a></li>
-          <li>
-            <a class="link" href="https://zoraclesscribe.gitbook.io/zoracles/"
-              >Docs</a
-            >
-          </li>
-          <li><a class="link" href="https://nftswaps.org/">NFT Swap</a></li>
-          <li>
-            <a class="link" href="https://defiprime.com/zoracles">DeFi Prime</a>
-          </li>
-          <li>
-            <a class="link" href="https://zoracles.com/whitepaper_v1.pdf"
-              >Whitepaper</a
-            >
-          </li>
-          <li><a class="link" href="https://github.com/zoracles">Github</a></li>
-        </ul>
-      </div>
-      <div class="tabs more__links">
-        <h3 class="template">MORE LINKS</h3>
-        <ul class="list">
-          <li>
-            <a class="link" href="https://discord.com/invite/DSYQYAqEUX"
-              >Discord</a
-            >
-          </li>
-          <li><a class="link" href="https://t.me/zoracles">Telegram</a></li>
-          <li>
-            <a class="link" href="https://zoracles.medium.com/">Medium</a>
-          </li>
-          <li>
-            <a class="link" href="https://twitter.com/z0racles">Twitter</a>
-          </li>
-          <li>
-            <a class="link" href="https://www.reddit.com/r/Zoracles/">Reddit</a>
-          </li>
-          <li>
-            <a
-              class="link"
-              href="https://www.youtube.com/channel/UCFx9FbUYK38_HhSm9DL38fQ"
-              >YouTube</a
-            >
+          <li v-for="(item, index) in info" :key="index">
+            <a class="link" target="_blank" :href="item.href">{{ item.title }}</a>
           </li>
         </ul>
-      </div>
-      <div class="tabs subscribe">
-        <h3 class="template">SUBSCRIBE</h3>
-        <div class="form">
-          <input
-            class="input"
-            type="email"
-            placeholder="Enter your email"
-            required
-          />
-          <button class="btn"><a href="#">Send</a></button>
-        </div>
       </div>
     </div>
   </div>
 </template>
+
+<script>
+const QUICK_LINKS = [
+  {
+    title: "Token",
+    href: "",
+  },
+  {
+    title: "Uniswap",
+    href: "",
+  },
+  {
+    title: "Dextools",
+    href: "",
+  },
+  {
+    title: "Telegram",
+    href: "",
+  },
+  {
+    title: "Twitter",
+    href: "https://twitter.com/FinanceZet",
+  },
+];
+export default {
+  data() {
+    return {
+      info: QUICK_LINKS,
+    };
+  },
+};
+</script>
 
 <style lang="scss" scoped>
 .footer__container {
@@ -121,6 +101,7 @@
 .tabs {
   background-image: url(static/stars_section2.png);
   background-color: #131d41;
+  width: 50%;
 
   @media screen and (max-width: 767px) {
     text-align: center;
@@ -162,8 +143,8 @@
     @media screen and (max-width: 767px) {
       text-align: center;
       width: 100%;
-	  margin: 0;
-	  max-width: 100%;
+      margin: 0;
+      max-width: 100%;
     }
   }
 }
@@ -178,8 +159,8 @@
   flex-direction: row;
 
   @media screen and (max-width: 767px) {
-      justify-content: center;
-    }
+    justify-content: center;
+  }
 }
 .subscribe {
   width: 300px;

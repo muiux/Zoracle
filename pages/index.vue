@@ -18,18 +18,18 @@
 <script>
 const INFO_BLOCKS = [
   {
-    title: "NFT Swap",
+    title: "Zet Swap",
     text:
-      "We are building the underlying technology to support trusted NFT Swaps powered by Zora Score which will include Uniswap V3 LP tokens.",
+      "We are building the underlying technology to support trusted decentralized ERC20/NFT Swaps.",
     img: "/info_1.png",
     bgImg: "/stars_1.png",
     isReversed: false,
     animationDir: "lottie/1/data.json",
   },
   {
-    title: "Algorithmic Credit",
+    title: "Zet Betting",
     text:
-      "We are building an algorithmic approach to credit. Our credit rating will determine creditworthiness and a API will be used in DeFi ecosystem.",
+      "We are building a world first Meme Betting platform. Anyone can participate in Zet Betting with $ZET and other $MEME tokens that we support.",
     img: "/info_2.png",
     isReversed: true,
     animationDir: "lottie/2/data.json",

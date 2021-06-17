@@ -2,18 +2,15 @@
   <div class="main">
     <div class="content">
       <h1 class="main__title">
-        DEFI <span class="brand">O</span>RACLE PLATFORM
+        <span class="brand">Z</span>et Inu
       </h1>
       <p class="main__text">
-        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-        sint. Velit officia consequat duis enim velit mollit. Exercitation
-        veniam consequat sunt nostrud amet.
+        Zet Inu($ZET) is community-focused and utility token for ZetSwap and ZetBetting.
       </p>
-      <a href="google.com" class="main__btn">see swaps</a>
+      <a href="google.com" class="main__btn">Join Us</a>
     </div>
     <div class="bg" ref="anim">
     </div>
-    <button @click="refresh">Click Me!</button>
   </div>
 </template>
 
@@ -37,11 +34,6 @@ export default {
       path: "lottie/main/data.json"
     });
   },
-  methods: {
-    refresh: function(event) {
-      alert('Hi');
-    }
-  }
 };
 </script>
 
@@ -154,7 +146,7 @@ export default {
 }
 @media screen and (max-width: 576px) {
   .main .main__title {
-    font-size: 20px;
+    font-size: 32px;
     margin-bottom: 8px;
   }
   .main .content {
@@ -162,7 +154,7 @@ export default {
     left: 25px;
   }
   .main .main__text {
-    font-size: 8px;
+    font-size: 10px;
     width: 140px;
     margin-bottom: 8px;
     line-height: 1.8;
