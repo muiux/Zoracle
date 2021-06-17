@@ -12,6 +12,7 @@
       :animationDir="item.animationDir"
       :class="`block-${index}`"
     />
+    <TimeLine />
   </div>
 </template>
 
@@ -46,11 +47,13 @@ const INFO_BLOCKS = [
 ];
 import Main from "@/components/Main.vue";
 import Info from "@/components/Info.vue";
+import TimeLine from "@/components/TimeLine.vue";
 export default {
   name: "App",
   components: {
     Main,
     Info,
+    TimeLine,
   },
   data() {
     return {
@@ -65,7 +68,7 @@ export default {
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  // text-align: center;
   color: #2c3e50;
   position: relative;
   width: 100%;
