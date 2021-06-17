@@ -13,6 +13,7 @@
     </div>
     <div class="bg" ref="anim">
     </div>
+    <button @click="refresh">Click Me!</button>
   </div>
 </template>
 
@@ -35,6 +36,11 @@ export default {
       autoplay: true,
       path: "lottie/main/data.json"
     });
+  },
+  methods: {
+    refresh: function(event) {
+      alert('Hi');
+    }
   }
 };
 </script>
