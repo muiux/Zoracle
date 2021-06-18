@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-container timeline-container>
-      <v-timeline align-top>
+      <v-timeline align-top :dense="$vuetify.breakpoint.xs">
         <v-timeline-item v-for="(item, index) in info" :key="index" large>
           <template v-slot:icon>
             <v-avatar class="timeline-avatar">
@@ -12,13 +12,24 @@
           <template v-slot:opposite>
             <span class="timeline-stage">{{ item.stage }}</span>
           </template>
-          <v-card :class="index % 2 == 0 ? 'elevation-2 border-left' : 'elevation-2 border-right'">
-            <v-card-title class="timeline-title">
-              {{ item.title }}
-            </v-card-title>
-            <v-card-text class="timeline-desc text-h4">
-              {{ item.description }}
-            </v-card-text>
+          <v-card
+            v-if="!$vuetify.breakpoint.xs"
+            :class="
+              index % 2 == 0
+                ? 'elevation-2 border-left'
+                : 'elevation-2 border-right'
+            "
+          >
+            <v-card-title class="timeline-title">{{ item.title }}</v-card-title>
+            <v-card-text class="timeline-desc">{{
+              item.description
+            }}</v-card-text>
+          </v-card>
+          <v-card v-if="$vuetify.breakpoint.xs" class="elevation-2 border-left">
+            <v-card-title class="timeline-title">{{ item.title }}</v-card-title>
+            <v-card-text class="timeline-desc">{{
+              item.description
+            }}</v-card-text>
           </v-card>
         </v-timeline-item>
       </v-timeline>
@@ -71,7 +82,7 @@ export default {
   },
 };
 </script>
-<style>
+<style lang="scss">
 .theme--light.v-application {
   background-color: unset !important;
 }
@@ -89,55 +100,64 @@ export default {
 .timeline-avatar {
   background-color: black;
   border: 2px solid white;
+  img {
+    width: 75%;
+    height: 75%;
+  }
 }
-.timeline-avatar img {
-  width: 75%;
-  height: 75%;
-}
-
 .timeline-container {
   padding: 20px;
+
+  &:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    position: absolute;
+    left: calc(50% - 9px);
+    z-index: 100;
+    top: 0px;
+    background-color: white;
+
+    @media screen and (max-width: 600px) {
+      left: 59px;
+    }
+  }
+
+  &:after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    position: absolute;
+    left: calc(50% - 9px);
+    z-index: 100;
+    bottom: 0px;
+    background-color: white;
+
+    @media screen and (max-width: 600px) {
+      left: 59px;
+    }
+  }
 }
-.timeline-container:before {
-  content: "";
-  width: 20px;
-  height: 20px;
-  display: inline-block;
-  border-radius: 50%;
-  position: absolute;
-  left: calc(50% - 9px);
-  z-index: 100;
-  top: 0px;
-  background-color: white;
-}
-.timeline-container:after {
-  content: "";
-  width: 20px;
-  height: 20px;
-  display: inline-block;
-  border-radius: 50%;
-  position: absolute;
-  left: calc(50% - 9px);
-  z-index: 100;
-  bottom: 0px;
-  background-color: white;
-}
+
 .timeline-stage {
   font-size: 44px;
   color: #ed8800;
   line-height: 1;
+  font-weight: 800;
 }
 .timeline-title {
   color: white;
   font-size: 20px;
 }
 .timeline-desc {
+  font-size: 24px;
   white-space: pre-line;
   color: black !important;
   font-weight: bold !important;
-}
-.timeline-desc:first-line {
-  line-height: 0;
 }
 
 .border-left {
