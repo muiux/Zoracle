@@ -1,2 +1,2 @@
-# Zoracle
-Built with NuxtJS
+# zoracles
+new project

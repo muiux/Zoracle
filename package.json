@@ -1,0 +1,22 @@
+{
+  "name": "zoracle",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "core-js": "^3.9.1",
+    "lottie-web": "^5.7.11",
+    "nuxt": "^2.15.3",
+    "sass": "1.32.5",
+    "sass-loader": "10.1.1",
+    "v-click-outside": "^3.1.2"
+  },
+  "devDependencies": {
+    "@nuxtjs/vuetify": "^1.12.1"
+  }
+}
