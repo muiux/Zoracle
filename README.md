@@ -1,2 +1,2 @@
-# zoracles
-new project
+# Zoracles
+NuxtJS
