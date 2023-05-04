@@ -148,7 +148,7 @@ bundles
 bundle
 
 # Dist Folder
-dist
+# dist
 
 #Docusaurus website build folder
 documentation/website/build
