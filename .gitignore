@@ -148,7 +148,7 @@ bundles
 bundle
 
 # Dist Folder
-# dist
+dist
 
 #Docusaurus website build folder
 documentation/website/build
@@ -160,4 +160,4 @@ documentation/website/build
 .storybookout
 
 # End of https://www.gitignore.io/api/vim,node,macos
-yarn.lock
+# yarn.lock
